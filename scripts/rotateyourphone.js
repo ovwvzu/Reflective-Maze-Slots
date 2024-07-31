@@ -36,7 +36,7 @@ function _rf_rotate(e) {
         rotateDiv.style.justifyContent = 'center';
         rotateDiv.style.textAlign = 'center';
         rotateDiv.style.fontSize = '24px';
-        rotateDiv.innerHTML = '请旋转屏幕为横屏';
+        rotateDiv.innerHTML = 'Please rotate the screen to landscape mode';
     } else {
         rotateDiv.style.removeProperty('width');
         rotateDiv.style.removeProperty('height');
