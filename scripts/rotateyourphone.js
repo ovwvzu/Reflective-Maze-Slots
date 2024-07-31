@@ -22,8 +22,8 @@ function _rf_checkratio() {
 
 function _rf_rotate(e) {
     if (e === 'show') {
-        document.getElementById('rf_rotate').style.width = '100%';
-        document.getElementById('rf_rotate').style.height = '100%';
+        document.getElementById('rf_rotate').style.width = '50%';
+        document.getElementById('rf_rotate').style.height = '50%';
         document.getElementById('rf_rotate').style.position = 'absolute';
         document.getElementById('rf_rotate').style.opacity = '0.8';
         document.getElementById('rf_rotate').style.backgroundColor = 'black';
