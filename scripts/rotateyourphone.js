@@ -27,7 +27,7 @@ function _rf_rotate(e) {
         document.getElementById('rf_rotate').style.position = 'absolute';
         document.getElementById('rf_rotate').style.opacity = '0.8';
         document.getElementById('rf_rotate').style.backgroundColor = 'black';
-        document.getElementById('rf_rotate').innerHTML = '<img src="rotate.png" style="top: 50%; left: 50%; position: relative; margin-top: -90px; margin-left: -140px;"/>';
+        document.getElementById('rf_rotate').innerHTML = '<img src="rotate.png" style="top: 50%; left: 50%; position: relative; margin-top: -10px; margin-left: -10px;"/>';
     } else {
             document.getElementById('rf_rotate').style.removeProperty('width');
         document.getElementById('rf_rotate').style.removeProperty('height');
