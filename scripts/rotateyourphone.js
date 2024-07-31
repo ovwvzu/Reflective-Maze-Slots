@@ -21,6 +21,13 @@ function _rf_checkratio() {
 }
 
 function _rf_rotate(e) {
+    document.getElementById('rf_rotate').style.removeProperty('width');
+        document.getElementById('rf_rotate').style.removeProperty('height');
+        document.getElementById('rf_rotate').style.removeProperty('position');
+        document.getElementById('rf_rotate').style.removeProperty('opacity');
+        document.getElementById('rf_rotate').style.removeProperty('backgroundColor');
+        document.getElementById('rf_rotate').innerHTML = '';
+    return;
     if (e === 'show') {
         document.getElementById('rf_rotate').style.width = '100%';
         document.getElementById('rf_rotate').style.height = '100%';
@@ -29,11 +36,6 @@ function _rf_rotate(e) {
         document.getElementById('rf_rotate').style.backgroundColor = 'black';
         document.getElementById('rf_rotate').innerHTML = '<img src="rotate.png" style="top: 50%; left: 50%; position: relative; margin-top: -90px; margin-left: -140px;"/>';
     } else {
-        document.getElementById('rf_rotate').style.removeProperty('width');
-        document.getElementById('rf_rotate').style.removeProperty('height');
-        document.getElementById('rf_rotate').style.removeProperty('position');
-        document.getElementById('rf_rotate').style.removeProperty('opacity');
-        document.getElementById('rf_rotate').style.removeProperty('backgroundColor');
-        document.getElementById('rf_rotate').innerHTML = '';
+        
     }
 }
