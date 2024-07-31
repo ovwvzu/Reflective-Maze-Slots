@@ -1,5 +1,5 @@
 var rotate_shown = false;
-document.body.innerHTML = '<div id="rf_rotate"></div>';
+document.body.innerHTML += '<div id="rf_rotate"></div>';
 _rf_checkratio();
 window.onresize = function(event) {
     _rf_checkratio();
@@ -21,19 +21,36 @@ function _rf_checkratio() {
 }
 
 function _rf_rotate(e) {
+    var rotateDiv = document.getElementById('rf_rotate');
     if (e === 'show') {
-        document.getElementById('rf_rotate').style.width = '50%';
-        document.getElementById('rf_rotate').style.height = '50%';
-        document.getElementById('rf_rotate').style.position = 'absolute';
-        document.getElementById('rf_rotate').style.opacity = '0.8';
-        document.getElementById('rf_rotate').style.backgroundColor = 'black';
-        document.getElementById('rf_rotate').innerHTML = '<img src="rotate.png" style="top: 50%; left: 50%; position: relative; margin-top: -90px; margin-left: 340px;"/>';
+        rotateDiv.style.width = '100%';
+        rotateDiv.style.height = '100%';
+        rotateDiv.style.position = 'absolute';
+        rotateDiv.style.top = '0';
+        rotateDiv.style.left = '0';
+        rotateDiv.style.opacity = '0.8';
+        rotateDiv.style.backgroundColor = 'black';
+        rotateDiv.style.color = 'white';
+        rotateDiv.style.display = 'flex';
+        rotateDiv.style.alignItems = 'center';
+        rotateDiv.style.justifyContent = 'center';
+        rotateDiv.style.textAlign = 'center';
+        rotateDiv.style.fontSize = '24px';
+        rotateDiv.innerHTML = '请旋转屏幕为横屏';
     } else {
-            document.getElementById('rf_rotate').style.removeProperty('width');
-        document.getElementById('rf_rotate').style.removeProperty('height');
-        document.getElementById('rf_rotate').style.removeProperty('position');
-        document.getElementById('rf_rotate').style.removeProperty('opacity');
-        document.getElementById('rf_rotate').style.removeProperty('backgroundColor');
-        document.getElementById('rf_rotate').innerHTML = '';
+        rotateDiv.style.removeProperty('width');
+        rotateDiv.style.removeProperty('height');
+        rotateDiv.style.removeProperty('position');
+        rotateDiv.style.removeProperty('top');
+        rotateDiv.style.removeProperty('left');
+        rotateDiv.style.removeProperty('opacity');
+        rotateDiv.style.removeProperty('backgroundColor');
+        rotateDiv.style.removeProperty('color');
+        rotateDiv.style.removeProperty('display');
+        rotateDiv.style.removeProperty('alignItems');
+        rotateDiv.style.removeProperty('justifyContent');
+        rotateDiv.style.removeProperty('textAlign');
+        rotateDiv.style.removeProperty('fontSize');
+        rotateDiv.innerHTML = '';
     }
 }
