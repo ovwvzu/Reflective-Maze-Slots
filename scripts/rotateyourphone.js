@@ -38,7 +38,7 @@ function _rf_rotate(e) {
         rotateDiv.style.textAlign = 'center';
         rotateDiv.style.fontSize = '24px';
         rotateDiv.innerHTML = `
-            <img src="rotate.png" style="width: 300px; height: 300px; margin-bottom: 20px;" />
+            <img src="img/rotate.png" style="width: 300px; height: 300px; margin-bottom: 20px;" />
             Please rotate the screen to landscape mode
         `;
     } else {
