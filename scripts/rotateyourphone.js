@@ -25,7 +25,7 @@ function _rf_rotate(e) {
     if (e === 'show') {
         rotateDiv.style.width = '100%';
         rotateDiv.style.height = '100%';
-        rotateDiv.style.position = 'absolute';
+        rotateDiv.style.position = 'fixed';
         rotateDiv.style.top = '0';
         rotateDiv.style.left = '0';
         rotateDiv.style.opacity = '0.8';
@@ -44,20 +44,7 @@ function _rf_rotate(e) {
             </div>
         `;
     } else {
-        rotateDiv.style.removeProperty('width');
-        rotateDiv.style.removeProperty('height');
-        rotateDiv.style.removeProperty('position');
-        rotateDiv.style.removeProperty('top');
-        rotateDiv.style.removeProperty('left');
-        rotateDiv.style.removeProperty('opacity');
-        rotateDiv.style.removeProperty('backgroundColor');
-        rotateDiv.style.removeProperty('color');
-        rotateDiv.style.removeProperty('display');
-        rotateDiv.style.removeProperty('flexDirection');
-        rotateDiv.style.removeProperty('alignItems');
-        rotateDiv.style.removeProperty('justifyContent');
-        rotateDiv.style.removeProperty('textAlign');
-        rotateDiv.style.removeProperty('fontSize');
         rotateDiv.innerHTML = '';
+        rotateDiv.removeAttribute('style');
     }
 }
